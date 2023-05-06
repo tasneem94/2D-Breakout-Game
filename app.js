@@ -6,7 +6,7 @@ let ballSpeed = 45;
 const grid = document.querySelector(".grid");
 
 // adding the blocks
-function addBlock() {
+const addBlock = () => {
   for (let i = 0; i < 24; i++) {
 
     const row = Math.floor(i / 6);
@@ -31,7 +31,7 @@ function addBlock() {
 addBlockLevel4(grid);
 
 
-function gameOver(){
+const gameOver = () => {
   clearInterval(gameInterval);
 
   let gameOverText = document.createElement("div");
@@ -79,7 +79,7 @@ function levelPassed(){
 
 let gamePauseText;
 
-function gamePaused(){
+const gamePaused = () => {
   clearInterval(gameInterval);
   gameInterval = null; // reset gameInterval variable 
 
@@ -98,7 +98,7 @@ function gamePaused(){
   gameResumeText.addEventListener("click", gameResumed);
 }
 
-function gameResumed(){
+const gameResumed = () => {
   // Remove the paused text from the grid
   grid.removeChild(gamePauseText);
 
@@ -120,7 +120,7 @@ document.addEventListener("keydown", (event) => {
   });
 
 
-function checkBlocksRemaining() {
+const checkBlocksRemaining = () => {
   const blocks = document.querySelectorAll(".block");
   const hardBlocks = document.querySelectorAll(".block-hard-1");
   const harderBlocks = document.querySelectorAll(".block-hard-2");
@@ -142,7 +142,7 @@ function checkBlocksRemaining() {
 let ballLaunched = false; 
 
 //move the ball 
-function moveBall() {
+const moveBall= () => {
 
     const gridRect = grid.getBoundingClientRect();
     const ballRect = ball.getBoundingClientRect();
@@ -303,7 +303,7 @@ const timerElement = document.querySelector('.timer');
 let timerValue = 9999;
 
 // Update the timer every second
-function startCountdown() {
+const startCountdown = () => {
   if (countdown) {
     clearInterval(countdown);
   }

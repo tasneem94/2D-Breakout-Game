@@ -1,6 +1,6 @@
 let moveBlocksInterval;
 
-function addBlockLevel4(grid) {
+const addBlockLevel4 = (grid) => {
 
     ballSpeed = 40;
   
@@ -10,7 +10,7 @@ function addBlockLevel4(grid) {
       const col = i % 6;
   
       const block = document.createElement("div");
-    //   const blockHard1 = document.createElement("div");
+    
     //   const blockHard2 = document.createElement("div");
   
       if(row===0 && col==0)

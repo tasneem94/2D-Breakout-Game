@@ -1,6 +1,6 @@
 // const grid = document.querySelector(".grid");
 
-function addBlockLevel2(grid) {
+const addBlockLevel2 = (grid) => {
 
   // ballSpeed = 45;
 

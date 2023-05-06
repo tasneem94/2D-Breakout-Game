@@ -1,4 +1,4 @@
-function addBlockLevel3(grid) {
+const addBlockLevel3 = (grid) => {
 
     ballSpeed = 40;
   
