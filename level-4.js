@@ -10,8 +10,8 @@ const addBlockLevel4 = (grid) => {
       const col = i % 6;
   
       const block = document.createElement("div");
-    
-    //   const blockHard2 = document.createElement("div");
+
+    //   const blockHard2 = document.createElement("div");g
   
       if(row===0 && col==0)
         block.classList.add("block-hard-2");

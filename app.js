@@ -1,7 +1,7 @@
 const MIN_WINDOW_WIDTH = 705//grid.offsetWidth+50;
 const MIN_WINDOW_HEIGHT = 405//grid.offsetHeight+50;
 let score = 0;
-let level = 2;
+let level = 1;
 let ballSpeed = 45;
 const grid = document.querySelector(".grid");
 
@@ -25,10 +25,10 @@ const addBlock = () => {
 }
 
 // Add the initial blocks and user to the grid
-// addBlock();
+addBlock();
 // addBlockLevel2(grid);
 // addBlockLevel3(grid);
-addBlockLevel4(grid);
+// addBlockLevel4(grid);
 
 
 const gameOver = () => {
@@ -52,9 +52,11 @@ const gameOver = () => {
 
   restartLevelText.addEventListener("click", function() {
     // do something when the "next level" text is clicked
+    location.reload();
+    
   });
   restartGameText.addEventListener("click", function() {
-    // do something when the "next level" text is clicked
+    window.location.href = "index.html";
   });
 }
 
@@ -74,6 +76,13 @@ function levelPassed(){
   let nextLevelText = levelPassedText.querySelector(".next-level");
   nextLevelText.addEventListener("click", function() {
     // do something when the "next level" text is clicked
+    // load next level script
+  const script = document.createElement('script');
+  script.src = `level-${level}.js`;
+  document.body.appendChild(script);
+  
+  // increment level for next click
+  level++;
   });
 }
 

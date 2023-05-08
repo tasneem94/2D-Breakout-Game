@@ -9,6 +9,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .grid{
@@ -189,6 +190,28 @@ body{
 
  .section .score{
     z-index: 2;
+  }
+
+  .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: red;
+    margin-top: 100px;
+  }
+
+  .game-heading {
+    color: red;
+    text-shadow: 1px 1px 1px white;
+  }
+
+  .menu-start-game {
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .menu-start-game:hover {
+    color: rgb(213, 35, 35);
   }
 
 
